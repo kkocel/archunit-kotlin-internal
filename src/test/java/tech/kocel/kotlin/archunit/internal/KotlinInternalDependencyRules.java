@@ -13,17 +13,17 @@ import static com.tngtech.archunit.PublicAPI.Usage.ACCESS;
 public class KotlinInternalDependencyRules {
 
     @PublicAPI(usage = ACCESS)
-    public static ArchCondition<JavaClass> accessClassesThatResideInAnUpperPackage() {
-        return new AccessClassesThatResideInAnUpperPackageCondition();
+    public static ArchCondition<JavaClass> accessClassesThatResideInAnOuterPackage() {
+        return new AccessClassesThatResideInAnOuterPackageCondition();
     }
 
     @PublicAPI(usage = ACCESS)
-    public static ArchCondition<JavaClass> accessClassesThatResideInALowerPackage() {
-        return new AccessClassesThatResideInALowerPackageCondition();
+    public static ArchCondition<JavaClass> accessClassesThatResideInASubpackage() {
+        return new AccessClassesThatResideInASubpackageCondition();
     }
 
-    private static class AccessClassesThatResideInAnUpperPackageCondition extends ArchCondition<JavaClass> {
-        AccessClassesThatResideInAnUpperPackageCondition() {
+    private static class AccessClassesThatResideInAnOuterPackageCondition extends ArchCondition<JavaClass> {
+        AccessClassesThatResideInAnOuterPackageCondition() {
             super("access classes that reside in an upper package");
         }
 
@@ -42,8 +42,8 @@ public class KotlinInternalDependencyRules {
         }
     }
 
-    private static class AccessClassesThatResideInALowerPackageCondition extends ArchCondition<JavaClass> {
-        AccessClassesThatResideInALowerPackageCondition() {
+    private static class AccessClassesThatResideInASubpackageCondition extends ArchCondition<JavaClass> {
+        AccessClassesThatResideInASubpackageCondition() {
             super("access classes that reside in a lower package");
         }
 
