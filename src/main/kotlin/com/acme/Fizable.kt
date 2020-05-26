@@ -1,3 +1,3 @@
-package com.myapp
+package com.acme
 
 interface Fizable

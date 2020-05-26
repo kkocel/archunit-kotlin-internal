@@ -1,6 +1,6 @@
-package com.myapp
+package com.acme
 
-import com.myapp.fiz.InternalFizz
+import com.acme.fiz.InternalFizz
 
 internal class Booh {
 

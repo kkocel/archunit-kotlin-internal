@@ -1,4 +1,4 @@
-package com.myapp.fiz
+package com.acme.fiz
 
 internal class InternalBuzz {
 

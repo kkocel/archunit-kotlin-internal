@@ -1,4 +1,4 @@
-package com.myapp
+package com.acme
 
 class Foo {
 

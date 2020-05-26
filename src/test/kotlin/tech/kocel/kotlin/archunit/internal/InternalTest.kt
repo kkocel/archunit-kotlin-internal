@@ -11,13 +11,13 @@ class InternalTest {
     @Test
     fun `limit internal scope`() {
         val nonInternalKotlinClasses = ClassFileImporter()
-            .importPackages("com.myapp")
+            .importPackages("com.acme")
             .that(isKotlinNotInternal())
 
         noClasses().should(accessClassesThatResideInALowerPackage()).check(nonInternalKotlinClasses)
 
         val internalKotlinClasses = ClassFileImporter()
-            .importPackages("com.myapp")
+            .importPackages("com.acme")
             .that(isKotlinInternal())
 
         noClasses().should(accessClassesThatResideInAnUpperPackage()).check(internalKotlinClasses)
